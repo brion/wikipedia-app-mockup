@@ -1,0 +1,98 @@
+.toolbar {
+	position: absolute;
+	background: #eee;
+	left: 0;
+	right: 0;
+	height: 48px;
+}
+
+#header-bar {
+	top: 0;
+}
+#toolbar-region {
+	bottom: 0;
+}
+
+.landscape #toolbar-region {
+	height: auto;
+	left: auto;
+	top: 48px;
+	width: 48px;
+}
+
+#view {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 48px;
+	bottom: 48px;
+	overflow: auto;
+}
+.landscape #view {
+	bottom: 0;
+	right: 48px;
+}
+#content {
+	padding: 8px;
+}
+
+#header-bar .toolbar-inside {
+	padding: 10px;
+}
+
+#right-buttons {
+	float: right;
+}
+
+#header-bar button {
+	appearance: none;
+	border: none;
+	width: 24px;
+	height: 24px;
+	background-size: 24px 24px;
+}
+
+#header-bar #title-button {
+	background-image: url(images/title.png);
+	width: 138px;
+	background-size: 138px 24px;
+}
+
+#menu-button {
+	background-image: url(images/menu.png);
+}
+
+#search-button {
+	background-image: url(images/search.png);
+}
+
+#toolbar {
+	text-align: center;
+}
+#toolbar button {
+	appearance: none;
+	border: none;
+	width: 48px;
+	height: 48px;
+	background-size: 48px 48px;
+}
+
+#back-button {
+	background-image: url(images/toolbar-back.png);
+}
+
+#forward-button {
+	background-image: url(images/toolbar-forward.png);
+}
+
+#output-button {
+	background-image: url(images/toolbar-output.png);
+}
+
+#sources-button {
+	background-image: url(images/toolbar-sources.png);
+}
+
+#settings-button {
+	background-image: url(images/toolbar-settings.png);
+}
