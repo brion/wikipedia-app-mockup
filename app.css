@@ -9,34 +9,17 @@
 #header-bar {
 	top: 0;
 }
-#toolbar-region {
-	bottom: 0;
-}
-
-.landscape #toolbar-region {
-	height: auto;
-	left: auto;
-	top: 48px;
-	width: 48px;
-}
 
 #view {
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: 48px;
-	bottom: 48px;
+	bottom: 0;
 	overflow: auto;
 }
-.portrait #view {
+#view {
 	border-top: 1px solid #e2e2e2;
-	border-bottom: 1px solid #e2e2e2;
-}
-.landscape #view {
-	bottom: 0;
-	right: 48px;
-	border-top: 1px solid #e2e2e2;
-	border-right: 1px solid #e2e2e2;
 }
 #content {
 	padding: 8px;
@@ -50,12 +33,26 @@
 	float: right;
 }
 
-#header-bar button {
+#header-bar button,
+#content-actions button {
+	appearance: none;
+	border: none;
+	width: 24px;
+	height: 24px;
+	background-color: transparent;
+	background-size: 24px 24px;
+}
+
+#content-actions button {
 	appearance: none;
 	border: none;
 	width: 24px;
 	height: 24px;
 	background-size: 24px 24px;
+}
+
+#content-actions {
+	float: right;
 }
 
 #header-bar #title-button {
@@ -72,23 +69,18 @@
 	background-image: url(images/search.png);
 }
 
-#toolbar {
-	text-align: center;
-}
-#toolbar button {
-	appearance: none;
-	border: none;
+#back-button {
+	background-image: url(images/toolbar-back.png);
 	width: 48px;
 	height: 48px;
 	background-size: 48px 48px;
 }
 
-#back-button {
-	background-image: url(images/toolbar-back.png);
-}
-
 #forward-button {
 	background-image: url(images/toolbar-forward.png);
+	width: 48px;
+	height: 48px;
+	background-size: 48px 48px;
 }
 
 #output-button {
@@ -101,4 +93,18 @@
 
 #settings-button {
 	background-image: url(images/toolbar-settings.png);
+}
+
+#language-button {
+	background-image: url(images/icon-language.png);
+	width: 27px !important;
+	height: 16px !important;
+	background-size: 27px 16px !important;
+}
+
+
+h1 {
+	font-family: "Georgia";
+	font-weight: normal;
+	margin-top: 0;
 }
