@@ -28,9 +28,15 @@
 	bottom: 48px;
 	overflow: auto;
 }
+.portrait #view {
+	border-top: 1px solid #e2e2e2;
+	border-bottom: 1px solid #e2e2e2;
+}
 .landscape #view {
 	bottom: 0;
 	right: 48px;
+	border-top: 1px solid #e2e2e2;
+	border-right: 1px solid #e2e2e2;
 }
 #content {
 	padding: 8px;
