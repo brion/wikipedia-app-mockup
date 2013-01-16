@@ -25,15 +25,13 @@
 
 
 	function clearView() {
-		$('#content-content').empty();
+		$('#content-content').empty().scrollTop(0);
 	}
 	function addViewTitle(title) {
 		$('<h1></h1>').text(title).appendTo('#content-content');
 	}
 	function addViewSection(section) {
-		var $section = $('<div></div>'),
-			$header = $('<h2></h2>').text(section.line);
-		$section.append($header);
+		var $section = $('<div></div>');
 		$section.append(section.text);
 		$('#content-content').append($section);
 	}
@@ -60,7 +58,8 @@
 				console.log(data);
 			} else {
 				clearView();
-				addViewTitle(term);
+				var title = data.mobileview.normalizedtitle || term;
+				addViewTitle(title);
 				$.each(data.mobileview.sections, function(id, section) {
 					/*
 					console.log('----');
@@ -80,7 +79,8 @@
 		
 		var matches = href.match(/^\/wiki\/(.*)$/);
 		if (matches) {
-			loadWikiPage(matches[1]);
+			var title = decodeURIComponent(matches[1]);
+			loadWikiPage(title);
 		} else {
 			if (href.substr(0, 2) == '//') {
 				href = 'https:' + href;
