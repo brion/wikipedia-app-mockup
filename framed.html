@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>App mockup</title>
+
+<body>
+
+	<div id="controls">
+		<label for="size">Screen size</label>
+		<select id="size">
+			<option id="iphone-4" value="320x480">iPhone 4</option>
+			<option id="iphone-5" value="320x568">iPhone 5</option>
+			<option id="ipad" value="768x1024">iPad</option>
+			<option id="nexus-4" value="384x640">Nexus 4</option>
+			<option id="nexus-7" value="600x960">Nexus 7</option>
+			<option id="nexus-10" value="800x1280">Nexus 10</option>
+		</select>
+		<button id="rotate">Rotate</button>
+	</div>
+	
+	<br>
+	
+	<iframe id="frame" src="index.html" width="320" height="480"></iframe>
+
+	<script src="jquery-1.9.0.js"></script>
+	<script src="framed.js"></script>

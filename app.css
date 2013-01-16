@@ -1,3 +1,17 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	font-family: "Moz TT", "Roboto", "Droid Sans", "Helvetica", "Arial";
+}
+
+#main-body {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+}
+
 .toolbar {
 	position: absolute;
 	background: #eee;
@@ -107,4 +121,53 @@ h1 {
 	font-family: "Georgia";
 	font-weight: normal;
 	margin-top: 0;
+}
+
+
+.side-menu {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background-color: #4E4E4E;
+	color: white;
+}
+#left-menu {
+	left: 0;
+	width: 228px;
+	border-left: solid 12px #333;
+}
+#right-menu {
+	right: 0;
+	width: 228px;
+	border-right: solid 12px #333;
+}
+.side-menu ul {
+	list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+.side-menu li {
+	border-top: 1px solid #717171;
+	border-bottom: 1px solid #414141;
+	padding: 10px 0px 10px 40px;
+    font-weight: normal;
+    text-shadow: 0 1px 0 black;
+}
+
+
+
+body.left-menu #left-menu {
+	display: block;
+}
+body.left-menu #main-body {
+	left: 240px;
+}
+
+body.right-menu #right-menu {
+	display: block;
+}
+body.right-menu #main-body {
+	right: 240px;
 }
