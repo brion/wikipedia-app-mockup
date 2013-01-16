@@ -2,7 +2,7 @@
 	"use strict";
 	
 	var width = $('#frame').width(),
-		height = $('#frame').height(),
+		height = $('#frame').height() + 22,
 		portrait = (height > width);
 
 	function setWindowSize() {
@@ -14,7 +14,8 @@
 			w = height;
 			h = width;
 		}
-		$('#frame').attr('width', w).attr('height', h);
+		$('#frame').attr('width', w).attr('height', h - 22);
+		$('#screen').width(w);
 		window.location.hash = '#' + w + 'x' + h;
 	}
 	

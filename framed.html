@@ -5,6 +5,28 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<title>App mockup</title>
 
+	<style type="text/css">
+		html, body {
+			background: #444;
+			color: white;
+		}
+		
+		#screen {
+			width: 320px;
+		}
+		#status-bar {
+			height: 14px;
+			background: black;
+			color: white;
+			font-family: "Helvetica";
+			font-size: 14px;
+			padding: 4px;
+		}
+		#frame {
+			border: none;
+		}
+	</style>
+
 <body>
 
 	<div id="controls">
@@ -21,8 +43,11 @@
 	</div>
 	
 	<br>
-	
-	<iframe id="frame" src="index.html" width="320" height="480"></iframe>
+
+	<div id="screen">
+		<div id="status-bar">Simulator</div>
+		<iframe id="frame" src="index.html" width="320" height="480"></iframe>
+	</div>
 
 	<script src="jquery-1.9.0.js"></script>
 	<script src="framed.js"></script>
